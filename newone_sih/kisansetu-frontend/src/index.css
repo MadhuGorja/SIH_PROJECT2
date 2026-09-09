@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --forest: #1E4B3A;
+  --forest-dark: #123326;
+  --bridge-blue: #1E4B7A;
+  --harvest: #E2A63B;
+  --paper: #F8F6F0;
+  --ink: #1C2321;
+
+  --farmer: #C97A2B;
+  --farmer-bg: #FBF0E2;
+  --officer: #2F6FB3;
+  --officer-bg: #E9F1FB;
+  --inspector: #7A5CC0;
+  --inspector-bg: #F1EDFB;
+  --admin: #3C8A5B;
+  --admin-bg: #E9F5EE;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display { font-family: 'Fraunces', ui-serif, Georgia, serif; }
+
+::selection { background: var(--harvest); color: var(--forest-dark); }
+
+:focus-visible {
+  outline: 2px solid var(--bridge-blue);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
