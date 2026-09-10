@@ -1,16 +1,18 @@
 version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
-        - cd newone_sih/kisansetu-frontend && npm install
-    build:
-      commands:
-        - cd newone_sih/kisansetu-frontend && npm run build
-  artifacts:
-    baseDirectory: newone_sih/kisansetu-frontend/dist
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - newone_sih/kisansetu-frontend/node_modules/**/*
+applications:
+  - appRoot: newone_sih/kisansetu-frontend
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm install
+        build:
+          commands:
+            - npm run build
+      artifacts:
+        baseDirectory: dist
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
