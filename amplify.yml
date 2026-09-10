@@ -1,15 +1,12 @@
 version: 1
-
 frontend:
   phases:
     preBuild:
       commands:
-        - cd newone_sih/kisansetu-frontend
-        - npm install
+        - cd newone_sih/kisansetu-frontend && npm install
     build:
       commands:
-        - cd newone_sih/kisansetu-frontend
-        - npm run build
+        - cd newone_sih/kisansetu-frontend && npm run build
   artifacts:
     baseDirectory: newone_sih/kisansetu-frontend/dist
     files:
